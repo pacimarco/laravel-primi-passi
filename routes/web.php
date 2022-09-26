@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 Route::get('/laravel-primi-passi', function () {
     
-    
+    $variabileDinamicaTitolo = 'hello world dinamica';
+    return view('laravel-primi-passi',['title' => $variabileDinamicaTitolo]);
     echo "hello world!!";
     die();
 });
