@@ -17,11 +17,15 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/statico', function () {
+    return view('statico');
+})->name('statico');
+
 
 Route::get('/laravel-primi-passi', function () {
     
-    $variabileDinamicaTitolo = 'hello world dinamica';
+    $variabileDinamicaTitolo = 'hello world dinamico';
     return view('laravel-primi-passi',['title' => $variabileDinamicaTitolo]);
     echo "hello world!!";
     die();
-});
+})->name('paginaPrimiPassi');
